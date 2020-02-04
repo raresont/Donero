@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="defaultHref"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleFavorite()">
+        <ion-icon *ngIf="!isFavorite" slot="icon-only" name="star-outline"></ion-icon>
+        <ion-icon *ngIf="isFavorite" slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+      <ion-button (click)="shareSession()">
+        <ion-icon slot="icon-only" name="share"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div padding *ngIf="session">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="6">
+          <span *ngFor="let track of session?.tracks" [class]="'session-track-'+track.toLowerCase()">{{track}}</span>
+        </ion-col>
+        <ion-col size="6" text-right [ngClass]="{'show-favorite': isFavorite}">
+          <ion-icon name="heart-empty" size="large" class="icon-heart-empty" (click)="toggleFavorite()"></ion-icon>
+          <ion-icon name="heart" color="danger" size="large" class="icon-heart" (click)="toggleFavorite()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h1>{{session.name}}</h1>
+ <!--   <p>{{session.description}}</p> -->
+    <ion-text color="medium">
+      {{session.timeStart}} &ndash; {{session.timeEnd}}
+      <br /> {{session.location}}
+    </ion-text>
+    <img src="assets/img/speakers/s1.jpg" style="border-radius:50%;width:15%;position:absolute;right:10%;top:15%" />
+  </div>
+<br><br><br>
+  <ion-list>
+    <ion-item>
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="bullet pink"></div>
+            <div class="time">5pm</div>
+            <div class="desc">
+              <h3>Donation to Wuhan</h3>
+              <h4>10kg of rice</h4>
+            </div>
+          </li>
+          <li>
+            <div class="bullet green"></div>
+            <div class="time">3 - 4pm</div>
+            <div class="desc">
+              <h3>Items were bought</h3>
+              <h4>Prepared for shipping</h4>
+              <div class="people">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg" alt="" />
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg" alt="" />
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mattsince87/128.jpg" alt="" />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="bullet orange"></div>
+            <div class="time">12pm</div>
+            <div class="desc">
+              <h3>Items were shipped</h3>
+            </div>
+          </li>
+          <li>
+            <div class="bullet green"></div>
+            <div class="time">9 - 11am</div>
+            <div class="desc">
+              <h3>The items arrived</h3>
+              <h4>End of the track</h4>
+            </div>
+          </li>
+        </ul>
+      </div>  
+
+    </ion-item>
+      <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Start Charging</ion-label>
+          <ion-datetime displayFormat="HH:mm "></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Stop Charging</ion-label>
+          <ion-datetime displayFormat="HH:mm "></ion-datetime>
+      </ion-item>
+      <ion-item >
+        <div style="background-color:rgb(236, 180, 58);width:100%;">
+          <h3>Time to station: 7 min</h3>
+        </div>
+      </ion-item>
+  </ion-list>
+</ion-content>

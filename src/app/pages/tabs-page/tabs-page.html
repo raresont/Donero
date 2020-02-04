@@ -1,0 +1,39 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>History of Donations</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label>Donate</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="paper"></ion-icon>
+      <ion-label>News</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+
+<ion-fab horizontal="center" vertical="bottom" style="padding-bottom:10%; border:5px white;" edge>
+  <ion-fab-button style="height:10vh;width:10vh;border:5px solid white; border-radius:50%; border-bottom:10px solid white; border-left:10px solid white;">
+    <!--<ion-icon color="danger" name="microphone" onClick="record()" ></ion-icon> -->
+
+   <!-- <button (click)="stopRecord()" *ngIf="recording"> -->
+    <!--  <ion-icon (click)="stopRecord()" *ngIf="recording" name="mic-off"></ion-icon> -->
+  <!--  </button> --> 
+   <!--<button (click)="startRecord()" *ngIf="!recording"> -->
+      <ion-icon (click)="startRecord()"  name="gift"></ion-icon>
+    <!--</button> -->
+  
+  </ion-fab-button> 
+</ion-fab>
