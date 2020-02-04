@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { RouterModule, Routes } from '@angular/router';
+
 import { SupportPage } from './support';
-import { SupportPageRoutingModule } from './support-routing.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SupportPage
+  }
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    SupportPageRoutingModule
-  ],
-  declarations: [
-    SupportPage,
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class SupportModule { }
+export class SupportPageRoutingModule { }

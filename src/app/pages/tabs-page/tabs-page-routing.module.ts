@@ -44,7 +44,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../map/map.module').then(m => m.MapModule)
+            loadChildren: () => import('../support/support.module').then(m => m.SupportPageRoutingModule)
           }
         ]
       },
