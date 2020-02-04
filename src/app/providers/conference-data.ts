@@ -47,6 +47,15 @@ export class ConferenceData {
               }
             });
           }
+
+          if (session.tracks) {
+            session.tracks.forEach((track: any) => {
+              if (this.data.tracks.indexOf(track) < 0) {
+                this.data.tracks.push(track);
+              }
+            });
+          }
+
         });
       });
     });
