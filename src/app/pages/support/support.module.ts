@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { SupportPage } from './support';
+import { SupportPageRoutingModule } from './support-routing.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: SupportPage
-  }
-];
+import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    SupportPageRoutingModule
+  ],
+  declarations: [
+    SupportPage,
+    ScheduleFilterPage
+  ],
+  entryComponents: [
+    ScheduleFilterPage
+  ]
 })
-export class SupportPageRoutingModule { }
+export class SupportModule { }

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SchedulePage } from './schedule';
-import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
+//import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { SchedulePageRoutingModule } from './schedule-routing.module';
 
 @NgModule({
@@ -15,11 +15,13 @@ import { SchedulePageRoutingModule } from './schedule-routing.module';
     SchedulePageRoutingModule
   ],
   declarations: [
-    SchedulePage,
-    ScheduleFilterPage
-  ],
+    SchedulePage//,
+   // ScheduleFilterPage
+  ]
+  /*,
   entryComponents: [
     ScheduleFilterPage
   ]
+  */
 })
 export class ScheduleModule { }

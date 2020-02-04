@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'support',
-    loadChildren: () => import('./pages/supportB/support.module').then(m => m.SupportModule)
+    loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
   },
   {
     path: 'login',

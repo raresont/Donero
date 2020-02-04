@@ -44,7 +44,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../support/support.module').then(m => m.SupportPageRoutingModule)
+            loadChildren: () => import('../support/support.module').then(m => m.SupportModule)
           }
         ]
       },

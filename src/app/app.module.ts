@@ -13,6 +13,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 
+import { CategoryService } from './providers/category.service'; 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     })
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser, SplashScreen, StatusBar],
+  providers: [InAppBrowser, SplashScreen, StatusBar, CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
