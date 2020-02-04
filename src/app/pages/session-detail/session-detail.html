@@ -19,10 +19,10 @@
   <div padding *ngIf="session">
     <ion-grid no-padding>
       <ion-row>
-        <ion-col size="6">
-          <span *ngFor="let track of session?.tracks" [class]="'session-track-'+track.toLowerCase()">{{track}}</span>
+        <ion-col size="9">
+          <span *ngFor="let track of session?.tracks" [class]="'session-track-'+track.toLowerCase()">| {{track}}</span>
         </ion-col>
-        <ion-col size="6" text-right [ngClass]="{'show-favorite': isFavorite}">
+        <ion-col size="3" text-right [ngClass]="{'show-favorite': isFavorite}">
           <ion-icon name="heart-empty" size="large" class="icon-heart-empty" (click)="toggleFavorite()"></ion-icon>
           <ion-icon name="heart" color="danger" size="large" class="icon-heart" (click)="toggleFavorite()"></ion-icon>
         </ion-col>
@@ -34,9 +34,8 @@
       {{session.timeStart}} &ndash; {{session.timeEnd}}
       <br /> {{session.location}}
     </ion-text>
-    <img src="assets/img/speakers/s1.jpg" style="border-radius:50%;width:15%;position:absolute;right:10%;top:15%" />
+    <img src="assets/img/speakers/s1.jpg" style="border-radius:50%;width:15%;position:absolute;right:10%;top:15%;z-index:100;" />
   </div>
-<br><br><br>
   <ion-list>
     <ion-item>
       <div class="timeline">
@@ -67,6 +66,7 @@
             <div class="time">12pm</div>
             <div class="desc">
               <h3>Items were shipped</h3>
+              <h4></h4>
             </div>
           </li>
           <li>

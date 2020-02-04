@@ -245,6 +245,82 @@
       "id": "5"
     }
   ],
+  "stories": [
+    {
+      "name": "Australia's deadly wildfires are showing no signs of stopping",
+      "cover_img": "assets/img/speakers/australia.jpg",
+      "labels": {
+        "POPULAR": 1,
+        "NOU": 1
+      },
+      "about": "Australia is being ravaged by the worst wildfires seen in decades, with large swaths of the country devastated since the fire season began in late July.",
+      "meta": {
+        "author": "Jessie Yeung, CNN",
+        "lecture_time": "5 min"
+      },
+      "email": "burt@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "3"
+    },
+    {
+      "name": "Second Wuhan coronavirus death outside of mainland China confirmed",
+      "cover_img": "assets/img/speakers/wuhan.jpg",
+      "labels": {
+        "POPULAR": 1,
+        "NOU": 1
+      },
+      "about": "The Wuhan coronavirus outbreak has killed more than 400 and infected 20000 worldwide. Follow here for the latest.",
+      "meta": {
+        "author": "Jessie Yeung, Steve George and Amy Woodyatt, CNN",
+        "lecture_time": "8 min"
+      },
+      "email": "burt@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "2"
+    },
+    {
+      "name": "Spain’s Ebro Delta DISAPPEARS as it is completely engulfed by water",
+      "cover_img": "assets/img/speakers/delta.jpg",
+      "labels": {
+        "POPULAR": 1,
+        "NOU": 1
+      },
+      "about": "A ZONE of catastrophic devastation is set to be declared in the Ebro Delta in Spain, as Storm Gloria has resulted in incalculable devastation to natural habitats, infrastructure and agriculture.",
+      "meta": {
+        "author": "Dr. Ion Popescu",
+        "lecture_time": "7 min"
+      },
+      "email": "burt@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "1",
+      "content": [
+        {
+          "type": "p",
+          "content": "Toata lumea asteapta cu nerabdare concediul. Parintii asteapta concediul ca o pauza in tumultoasa viata de parinte, dar din pacate din “meseria” de parinte nu-ti poti lua concediu nici de odihna nici de boala."
+        },
+        {
+          "type": "p",
+          "content": " Pentru a face fata mai bine provocarilor pregatite de cei mici sau de cei mai mari copii, v-am pregatit o minima trusa de concediu, care speram sa nu va fie necesara, dar daca apar situatii neprevazute, sa va indulceasca putin din nesiguranta si ingrijorare si sa fiti macar partial pregatiti."
+        }
+      ]
+    },
+    {
+      "name": "Why have thousands of dead fish washed up in southern Spain?",
+      "cover_img": "assets/img/speakers/menor.jpg",
+      "labels": {
+        "POPULAR": 1,
+        "NOU": 1
+      },
+      "about": "Thousands of dead fish have washed up on beaches in southern Spain in the aftermath of the recent Gota Fria floods",
+      "meta": {
+        "author": "Dr. Ion Popescu",
+        "lecture_time": "5 min"
+      },
+      "email": "burt@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "2"
+    }
+  ],
   "map": [
     {
       "name": "Mar Menor",

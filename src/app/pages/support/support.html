@@ -33,10 +33,10 @@
                    <ion-col col-12 no-margin no-padding>
                      <img src="{{session.cover_img}}"/></ion-col>
                      <p *ngIf="session.labels.POPULAR == 1 && session.labels.NOU == 0" class="ribbon">POPULAR</p>
-                     <p *ngIf="session.labels.NOU == 1 && session.labels.POPULAR == 0" class="ribbon2">NOU</p>
+                     <p *ngIf="session.labels.NOU == 1 && session.labels.POPULAR == 0" class="ribbon2">NEW</p>
    
                      <p *ngIf="session.labels.POPULAR == 1 && session.labels.NOU == 1" class="ribbon">POPULAR</p>
-                     <p *ngIf="session.labels.NOU == 1 && session.labels.POPULAR == 1" class="ribbon4">NOU</p>
+                     <p *ngIf="session.labels.NOU == 1 && session.labels.POPULAR == 1" class="ribbon4">NEW</p>
    
                    <ion-col col-12 no-margin no-padding>
                      <ion-card-content class="newPadding">
