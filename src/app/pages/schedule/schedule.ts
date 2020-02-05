@@ -6,6 +6,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+
 @Component({
   selector: 'page-schedule',
   templateUrl: 'schedule.html',
@@ -32,13 +34,28 @@ export class SchedulePage implements OnInit {
     public router: Router,
     public toastCtrl: ToastController,
     public user: UserData,
-    public config: Config
+    public config: Config,
+    private localNotifications: LocalNotifications
   ) { }
 
   ngOnInit() {
     this.updateSchedule();
 
     this.ios = this.config.get('mode') === 'ios';
+    this.viewNotificationExample();
+  }
+
+  viewNotificationExample() {
+    this.localNotifications.schedule({
+      id: 1,
+      text: 'Wuhan needs your help, can you donate a mask?',
+      sound: null,
+      priority : 4,
+      data: { secret: "s" },
+      smallIcon: 'file://assets/img/speakers/s1.jpg',
+      icon: 'file://assets/img/speakers/s1.jpg',
+      trigger: {at: new Date(new Date().getTime() + 3600)},
+    });
   }
 
   updateSchedule() {
